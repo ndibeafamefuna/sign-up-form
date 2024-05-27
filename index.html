@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/javascript/script.js"></script>
+</head>
+<body>
+    <main class="main">
+        <div class="main-box">
+            <section class="main-box1">
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced developers solve problems in real-time. Watching
+                    scripted tutorials is great, but understanding how developers think is
+                    invaluable.
+                </p>
+            </section>
+            <section class="main-box2">
+                <button id="button1"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
+                <div class="inside-box">
+                    <form action="" id="form-box">
+                        <div class="container">
+                            <div class="input-box" id="input-box-fname">
+                                <input type="text" name="firstName" id="firstName" class="input-field" placeholder="First Name" maxlength="15" />
+                                <img class="error-icon" id="error-icon-fname" src="/assets/image/icon-error.svg" alt="">
+                            </div>
+                            <p class="error-message" id="fname-error"></p>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="input-box" id="input-box-lname">
+                                <input type="text" name="lastName" id="lastName" class="input-field" placeholder="Last Name" maxlength="15"/> 
+                                <img class="error-icon" id="error-icon-lname" src="/assets/image/icon-error.svg" alt="" >
+                            </div>
+                            <p class="error-message" id="lname-error"></p>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="input-box" id="input-box-email">
+                                <input type="email" name="email" id="email" class="input-field" placeholder="Email" maxlength="45"/> 
+                                <input type="email" name="email" id="email2" class="input-field" placeholder="email@example.com" maxlength="45"/> 
+                                <img class="error-icon" id="error-icon-email" src="/assets/image/icon-error.svg" alt="">
+                            </div> 
+                            <p class="error-message" id="email-error"></p>
+                        </div>
+                           
+                        <div class="container">
+                             <div class="input-box" id="input-box-psw" onmouseover="switchIcon()" onmouseleave="reverseIcon()">
+                            <input type="password" name="password" id="password"  placeholder="Password" maxlength="20" />
+                                <button type="button" id="icon-btn" onclick="toggleIcon()"><i class="fa fa-eye-slash" id="icon1" ></i><i class="fa fa-eye" id="icon2"></i></button>
+                                <img class="error-icon" id="error-icon-psw" src="/assets/image/icon-error.svg" alt="">
+                            </div> 
+                            <p class="error-message" id="psw-error"></p> 
+                        </div>
+                                           
+                        
+                        <button  type="button" id="button2" onclick="inputValidate()">Claim your free trial</button>
+                       
+                        <p id="footer-message">By clicking the button, you are agreeing to our <strong id="tandc">Terms and Services</strong></p>
+                    </form>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+</body>
+</html>
