@@ -41,6 +41,14 @@ function inputValidate(){
         document.getElementById('email-error').innerHTML = 'Email cannot be empty';
         document.getElementById('input-box-email').style.border = '1px solid #ff0000';
         document.getElementById('error-icon-email').style.display = 'block';
+    }else if(email2 === ""){
+        document.getElementById('email').style.display = 'block';
+        document.getElementById('email2').style.display = 'none';
+        document.getElementById('email').placeholder === '';
+        document.getElementById('email2').placeholder === '';
+        document.getElementById('email-error').innerHTML = 'Looks like this is not an email';
+        document.getElementById('input-box-email').style.border = '1px solid #ff0000';
+        document.getElementById('error-icon-email').style.display = 'block';
     }else{
         document.getElementById('email').style.display = 'none';
         document.getElementById('email2').style.display = 'block';
