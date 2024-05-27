@@ -2,9 +2,10 @@ function inputValidate(){
     let firstName = document.getElementById('firstName').value;
     let lastName = document.getElementById('lastName').value;
     let email = document.getElementById('email').value;
+    let email2 = document.getElementById('email2').value;
     let password = document.getElementById('password').value;
     let emailRegex= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let inputValue= document.getElementById('email').value;
+    
 
     if (firstName === ""){
         document.getElementById('fname-error').innerHTML = 'First Name cannot be empty';
@@ -28,19 +29,21 @@ function inputValidate(){
         document.getElementById('error-icon-lname').style.display = 'none';
     }
 
-    if(inputValue.match(emailRegex)){
+    if(email.match(emailRegex)|| email2.match(emailRegex)){
         document.getElementById('email-error').innerHTML = '';
         document.getElementById('input-box-email').style.border = '1px solid hsl(246, 25%, 77%)';
         document.getElementById('error-icon-email').style.display = 'none';
-    }else if(email === ""){
+    }else if(email === "" && email2 === ""){
         document.getElementById('email').style.display = 'none';
         document.getElementById('email2').style.display = 'block';
+        document.getElementById('email').placeholder === '';
+        document.getElementById('email2').placeholder === '';
         document.getElementById('email-error').innerHTML = 'Email cannot be empty';
         document.getElementById('input-box-email').style.border = '1px solid #ff0000';
         document.getElementById('error-icon-email').style.display = 'block';
     }else{
-        document.getElementById('email').style.display = 'block';
-        document.getElementById('email2').style.display = 'none';
+        document.getElementById('email').style.display = 'none';
+        document.getElementById('email2').style.display = 'block';
         document.getElementById('email-error').innerHTML = 'Looks like this is not an email';
         document.getElementById('input-box-email').style.border = '1px solid #ff0000';
         document.getElementById('error-icon-email').style.display = 'block';
@@ -58,7 +61,8 @@ function inputValidate(){
         document.getElementById('error-icon-psw').style.display = 'none';
         document.getElementById('icon-btn').style.display = 'block'
     }
-
+   
+    console.log('email' + email, 'email2' + email2)
 }
 
 function switchIcon(){
