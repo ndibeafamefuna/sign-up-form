@@ -99,19 +99,16 @@ function toggleIcon(){
     let icon2= document.getElementById('icon2');
     let password = document.getElementById('password')
 
-    if(icon1.style.display === 'block'){
+    if(password.type === "password"){
         icon1.style.display = 'none';
-        icon2.style.display = 'block';   
+        icon2.style.display = 'block'; 
+        password.type = "text"; 
     }else{
         icon1.style.display = 'block';
         icon2.style.display = 'none';
-    }
-
-    if(password.type === "password"){
-        password.type = "text";
-    }else{
         password.type = "password";
     }
+
 }
 
 
